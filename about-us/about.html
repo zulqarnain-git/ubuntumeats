@@ -499,54 +499,119 @@ Cuts Everyday</h2>		</div>
 		</div>
 							</div>
 		</section>
-<section class="elementor-section elementor-inner-section elementor-element elementor-element-f405658 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f405658" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-default" style="display: flex; justify-content: center;">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-f405658 elementor-section-boxed elementor-section-height-default" data-id="f405658" data-element_type="section">
+    
+    <style>
+        /* Modern Team Section Styling */
+        .custom-team-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Taaki teeno ki height barabar lage height alignment ke liye */
+            gap: 25px;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column; /* Description upar, Title niche ke liye */
+            width: 28%; /* Side boxes ki width */
+            text-align: center;
+            border: 1px solid #f0f0f0;
+        }
+
+        /* CEO Box ko bada karne ke liye */
+        .team-card.ceo-box {
+            width: 33%; 
+            transform: scale(1.08); /* Thoda bada dikhega */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            border: 2px solid #BF0404; /* Aapki site ka red color accent */
+            z-index: 2;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
         
-        <!-- Box 1 -->
-        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-979bd9e" data-id="979bd9e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-6257681 team elementor-widget elementor-widget-heading" data-id="6257681" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h4 class="elementor-heading-title elementor-size-default"> Asif Moosa <br><span> CEO </span></h4>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-b75d050 elementor-widget elementor-widget-text-editor" data-id="b75d050" data-element_type="widget" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        <p>Leading with expertise and dedication to the farming industry, Qasim Ahmad<br />the complex details of our operations, ensuring precision and excellence in every aspect.</p>
-                    </div>
-                </div>
+        .team-card.ceo-box:hover {
+            transform: scale(1.1) translateY(-10px);
+        }
+
+        /* Description Styling */
+        .team-desc {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Name aur Title ko niche push karne ke liye */
+        .team-footer {
+            margin-top: auto; /* Isse yeh hamesha box ke bottom mein rahega */
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .team-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #BF0404; /* Red color */
+            letter-spacing: 1px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .team-card, .team-card.ceo-box { width: 90%; transform: none !important; margin-bottom: 20px; }
+        }
+    </style>
+
+    <div class="custom-team-container">
+        
+        <!-- Box: Qasim Ahmad (Operation Head) -->
+        <div class="team-card">
+            <div class="team-desc">
+               Qasim Ahmad spearheads our departments with a vision that goes beyond boundaries, nurturing a culture of creativity and efficiency.
+            </div>
+            <div class="team-footer">
+                <h4 class="team-name">Qasim Ahmad</h4>
+                <span class="team-title">Operation head - Asia</span>
             </div>
         </div>
 
-        <!-- Box 2 -->
-        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-46e257a" data-id="46e257a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-3d5f5b3 team elementor-widget elementor-widget-heading" data-id="3d5f5b3" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h4 class="elementor-heading-title elementor-size-default"> Qasim Ahmad <br><span> Operation head - Asia</span></h4>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-831625c elementor-widget elementor-widget-text-editor" data-id="831625c" data-element_type="widget" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        Hadi Oza spearheads our departments with a vision that goes beyond boundaries, nurturing a culture of creativity and efficiency.
-                    </div>
-                </div>
+        <!-- Box: Asif Moosa (CEO - BIGGER BOX) -->
+        <div class="team-card ceo-box">
+            <div class="team-desc">
+                Leading with expertise and dedication to the farming industry, Asif Moosa oversees the complex details of our operations, ensuring precision and excellence in every aspect. 
+            </div>
+            <div class="team-footer">
+                <h4 class="team-name">Asif Moosa</h4>
+                <span class="team-title">CEO</span>
             </div>
         </div>
 
-        <!-- Box 3 -->
-        <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-8242ccd" data-id="8242ccd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-02b9294 team elementor-widget elementor-widget-heading" data-id="02b9294" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h4 class="elementor-heading-title elementor-size-default">Fatima Tayob Moosa<br><span>Sales / Marketing</span></h4>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-9b3fa00 elementor-widget elementor-widget-text-editor" data-id="9b3fa00" data-element_type="widget" data-widget_type="text-editor.default">
-                    <div class="elementor-widget-container">
-                        Hadi Oza spearheads our departments with a vision that goes beyond boundaries, nurturing a culture of creativity and efficiency.
-                    </div>
-                </div>
+        <!-- Box: Fatima Tayob Moosa (Sales/Marketing) -->
+        <div class="team-card">
+            <div class="team-desc">
+                Fatima Tayob Moosa spearheads our departments with a vision that goes beyond boundaries, nurturing a culture of creativity and efficiency.
+            </div>
+            <div class="team-footer">
+                <h4 class="team-name">Fatima Tayob Moosa</h4>
+                <span class="team-title">Sales / Marketing</span>
             </div>
         </div>
 
